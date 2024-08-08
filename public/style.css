@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Title Styling */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Game Board Styling */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Cell Styling */
+.cell {
+    background: #e0e0e0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background: #ccc;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.cell.animated {
+    animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.7);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Message Styling */
+#message {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #007BFF;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Flag Styling */
+#flag {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #28a745;
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#flag.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+}
